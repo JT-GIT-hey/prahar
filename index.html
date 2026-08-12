@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Prahar — study music by time of day</title>
+<meta name="description" content="Eight watches of the day, eight ragas. A study companion built on Hindustani classical time-theory, streaming free from YouTube.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Baloo+2:wght@500;600;700&family=Work+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="grain" aria-hidden="true"></div>
+
+<header class="topbar">
+  <span class="wordmark">प्रहर <span class="wordmark-en">Prahar</span></span>
+  <span class="tagline">study music, tuned to the hour</span>
+</header>
+
+<main>
+
+  <section class="hero" id="hero">
+    <div class="hero-copy">
+      <p class="eyebrow" id="prahar-eyebrow">The current watch</p>
+      <h1 id="prahar-name">—</h1>
+      <p class="raga-meta" id="prahar-meta">Loading the wheel of the day…</p>
+      <p class="raga-mood" id="prahar-mood"></p>
+      <button class="play-current" id="play-current" type="button">
+        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M6 4l14 8-14 8V4z" fill="currentColor"/></svg>
+        Play this watch
+      </button>
+    </div>
+
+    <div class="wheel-wrap">
+      <svg id="wheel" viewBox="0 0 480 480" role="img" aria-label="Wheel of the eight prahars of the day">
+        <circle class="wheel-breath" cx="240" cy="240" r="228"/>
+      </svg>
+      <div class="wheel-center">
+        <span class="clock-readout" id="clock-readout">--:--</span>
+        <span class="clock-sub">local time</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="all-prahars" aria-labelledby="all-prahars-heading">
+    <div class="section-head">
+      <h2 id="all-prahars-heading">All eight watches</h2>
+      <p>Hindustani classical music assigns a mood and a raga to each three-hour watch of the day. Pick any of them — you don't have to wait for the clock.</p>
+    </div>
+    <div class="prahar-grid" id="prahar-grid"></div>
+  </section>
+
+  <section class="focus-panel" aria-labelledby="focus-heading">
+    <div class="section-head">
+      <h2 id="focus-heading">Sit for a while</h2>
+      <p>A quiet timer, no accounts, no streaks to feel guilty about.</p>
+    </div>
+    <div class="timer-card">
+      <svg class="timer-ring" viewBox="0 0 200 200" aria-hidden="true">
+        <circle class="ring-track" cx="100" cy="100" r="88"/>
+        <circle class="ring-progress" id="ring-progress" cx="100" cy="100" r="88"/>
+      </svg>
+      <div class="timer-face">
+        <span class="timer-readout" id="timer-readout">25:00</span>
+        <span class="timer-label" id="timer-label">focus</span>
+      </div>
+      <div class="timer-controls">
+        <button id="timer-toggle" type="button">Start</button>
+        <button id="timer-reset" type="button" class="ghost">Reset</button>
+        <div class="timer-lengths">
+          <button data-mins="25" class="len active">25</button>
+          <button data-mins="45" class="len">45</button>
+          <button data-mins="60" class="len">60</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="player-bar" id="player-bar">
+  <div class="player-info">
+    <span class="player-eyebrow">now streaming from YouTube</span>
+    <span class="player-title" id="player-title">Choose a watch to begin</span>
+  </div>
+  <div class="player-controls">
+    <button id="player-toggle" type="button" aria-label="Play or pause">
+      <svg viewBox="0 0 24 24" width="20" height="20"><path d="M6 4l14 8-14 8V4z" fill="currentColor"/></svg>
+    </button>
+    <input type="range" id="player-volume" min="0" max="100" value="60" aria-label="Volume">
+    <a id="player-yt-link" href="#" target="_blank" rel="noopener">open on YouTube ↗</a>
+  </div>
+  <div id="yt-mount" class="yt-mount" aria-hidden="true"></div>
+</footer>
+
+<p class="attribution">
+  Every track here plays through YouTube's own embedded player — nothing is downloaded, converted, or rehosted.
+  All music belongs to its performers and uploaders; if you love a raga, follow the channel and let them know on YouTube.
+</p>
+
+<script src="https://www.youtube.com/iframe_api"></script>
+<script src="script.js"></script>
+</body>
+</html>
