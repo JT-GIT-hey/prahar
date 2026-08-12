@@ -50,9 +50,25 @@ main{ position:relative; z-index:2; }
 
 /* ---------- HERO ---------- */
 .hero{
+  position:relative;
   display:grid; grid-template-columns: 1.1fr 1fr; align-items:center; gap:2rem;
-  padding: 2rem clamp(1.2rem, 4vw, 3rem) 3.5rem;
-  max-width:1180px; margin:0 auto;
+  padding: clamp(3rem, 12vh, 6rem) clamp(1.2rem, 4vw, 3rem) 4rem;
+  max-width:none; margin:0;
+  min-height:min(88vh, 760px);
+  background-image: url("assets/hero-himalaya.svg");
+  background-size: cover;
+  background-position: center bottom;
+  isolation:isolate;
+  overflow:hidden;
+}
+.hero::before{
+  content:""; position:absolute; inset:0; z-index:-1;
+  background: linear-gradient(180deg, rgba(23,20,31,.35) 0%, rgba(23,20,31,.15) 40%, rgba(17,14,23,.75) 82%, #17141F 100%);
+}
+.hero .hero-copy, .hero .wheel-wrap{ position:relative; z-index:1; }
+.hero-copy{
+  background: rgba(23,20,31,.32); backdrop-filter: blur(2px);
+  border-radius:20px; padding: 1.6rem 1.8rem;
 }
 .eyebrow{
   font-family:var(--mono); text-transform:uppercase; letter-spacing:.18em; font-size:.72rem;
@@ -117,6 +133,49 @@ main{ position:relative; z-index:2; }
 .card-raga{ font-family:var(--display); font-style:italic; font-size:1.3rem; margin:0; }
 .card-mood{ font-size:.85rem; color:var(--mist); margin:0; }
 
+/* ---------- LIBRARY ---------- */
+.library{ max-width:1180px; margin:0 auto; padding: 1rem clamp(1.2rem, 4vw, 3rem) 2.5rem; }
+.library-controls{
+  display:flex; flex-direction:column; gap:.9rem; margin-bottom:1.2rem;
+}
+#library-search{
+  font-family:var(--body); font-size:.95rem; padding:.7rem 1rem; border-radius:12px;
+  border:1px solid rgba(204,154,46,.25); background:var(--ink-2); color:var(--paper);
+}
+#library-search:focus{ outline:2px solid var(--brass); outline-offset:1px; }
+.chips{ display:flex; flex-wrap:wrap; gap:.45rem; }
+.chip{
+  font-family:var(--label); font-size:.78rem; font-weight:600; padding:.4rem .85rem;
+  border-radius:999px; border:1px solid rgba(255,255,255,.15); background:transparent;
+  color:var(--mist); cursor:pointer;
+}
+.chip.active{ background:var(--sage); border-color:var(--sage); color:var(--paper); }
+
+.library-list{
+  max-height:520px; overflow-y:auto; border:1px solid rgba(204,154,46,.15); border-radius:16px;
+  background:var(--ink-2);
+}
+.track-row{
+  display:flex; align-items:center; gap:.8rem; width:100%; text-align:left;
+  padding:.7rem 1rem; border:none; border-bottom:1px solid rgba(255,255,255,.06);
+  background:transparent; color:var(--paper); cursor:pointer; font-family:var(--body);
+}
+.track-row:last-child{ border-bottom:none; }
+.track-row:hover, .track-row:focus-visible, .track-row.playing{ background:rgba(204,154,46,.12); }
+.track-play{
+  flex:0 0 auto; width:26px; height:26px; border-radius:50%; background:rgba(204,154,46,.18);
+  display:grid; place-items:center; color:var(--brass-soft);
+}
+.track-row.playing .track-play{ background:var(--brass); color:#241B05; }
+.track-name{ flex:1 1 auto; font-size:.9rem; min-width:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.track-tag{
+  flex:0 0 auto; font-family:var(--mono); font-size:.64rem; text-transform:uppercase; letter-spacing:.08em;
+  color:var(--mist); border:1px solid rgba(255,255,255,.12); padding:.15rem .5rem; border-radius:999px;
+}
+.library-list::-webkit-scrollbar{ width:8px; }
+.library-list::-webkit-scrollbar-thumb{ background:rgba(204,154,46,.35); border-radius:8px; }
+.no-results{ padding:1.4rem; text-align:center; color:var(--mist); font-size:.9rem; }
+
 /* ---------- TIMER ---------- */
 .timer-card{
   background:var(--ink-2); border:1px solid rgba(204,154,46,.15); border-radius:24px;
@@ -171,10 +230,11 @@ main{ position:relative; z-index:2; }
 }
 
 @media (max-width: 860px){
-  .hero{ grid-template-columns:1fr; text-align:center; }
+  .hero{ grid-template-columns:1fr; text-align:center; min-height:auto; padding-top:2.4rem; }
   .hero-copy{ order:2; }
   .raga-mood{ margin-left:auto; margin-right:auto; }
   .player-controls{ order:3; width:100%; justify-content:space-between; }
+  .library-list{ max-height:420px; }
 }
 
 @media (prefers-reduced-motion: reduce){

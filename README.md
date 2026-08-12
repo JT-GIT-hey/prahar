@@ -20,9 +20,11 @@ your own play/pause/volume UI on top).
 
 ```
 prahar/
-├── index.html    — page structure
-├── style.css     — the whole visual design (one file, no build step)
-└── script.js     — the prahar data, wheel drawing, YouTube player, timer
+├── index.html              — page structure
+├── style.css                — the whole visual design (one file, no build step)
+├── script.js                 — prahar data, the 100-entry library, wheel drawing, YouTube player, timer
+└── assets/
+    └── hero-himalaya.svg    — the hero illustration (hand-coded SVG, not a stock photo)
 ```
 
 No framework, no build tools, no npm install — it's plain HTML/CSS/JS so
@@ -65,15 +67,22 @@ GitHub Pages can serve it as-is.
 
 ## Making it yours
 
-- **Swap tracks:** open `script.js` and edit the `PRAHARS` array — each
-  entry just needs a YouTube `videoId` (the part after `watch?v=` in any
-  YouTube URL). Use tracks you have the right to embed, or that the uploader
-  allows embedding for (most do, by default).
+- **Swap the wheel's 8 tracks:** edit the `PRAHARS` array in `script.js` —
+  each entry needs a YouTube `videoId` (the part after `watch?v=`).
+- **Edit the 100-entry library:** it's two arrays in `script.js` —
+  `LIBRARY` (86 individual tracks: `{ t: title, c: category, id: videoId }`)
+  and `PLAYLISTS` (14 full playlists: `{ t: title, c: "Playlist", list: playlistId }`,
+  the ID after `list=` in a YouTube playlist URL). Add, remove, or re-tag
+  entries freely — the search box and category chips work off whatever's
+  in these two arrays.
 - **Colors/type:** everything lives in the `:root` variables at the top of
   `style.css`.
+- **The background:** `assets/hero-himalaya.svg` is a plain text file — open
+  it in any editor to nudge colors, or swap in your own artwork under the
+  same filename.
 - **A track won't play:** some uploaders disable embedding. The player
-  falls back to showing "open on YouTube" — swap that `videoId` for another
-  version of the same raga.
+  falls back to showing "open on YouTube" — swap that entry for another
+  recording of the same raga.
 
 ## A note on the music
 

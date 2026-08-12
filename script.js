@@ -64,6 +64,134 @@ const PRAHARS = [
   }
 ];
 
+/* -------- The full library: 100 entries (86 individual tracks + 14
+   curated playlists), all real, all found via search. Swap freely. -------- */
+const LIBRARY = [
+  // Sitar
+  { t: "Raga Yaman — Ustad Vilayat Khan, Timeless Sitar Melodies", c: "Sitar", id: "VUbujNMLEw0" },
+  { t: "Raag Darbari — Deep Night Raga, B Sivaramakrishna Rao", c: "Sitar", id: "TW6So7L0bAM" },
+  { t: "Sitar For A Focused Mind", c: "Sitar", id: "3Zmk5G6h-qo" },
+  { t: "Stop Overthinking with Sitar", c: "Sitar", id: "Wvl_K8VC9C4" },
+  { t: "Sitar for Deep Work", c: "Sitar", id: "HLpJDxtGuhE" },
+  { t: "Raga Yaman (Sitar) — Shahid Parvez, Evening Ragas", c: "Sitar", id: "F30Hj91VOS0" },
+  { t: "Raga Yaman — Shahid Parvez, Evening Ragas album", c: "Sitar", id: "AXVe4Cc8TPQ" },
+  { t: "Glorious Sitar Jhalla — Shahid Parvez, Raag Yaman", c: "Sitar", id: "nR5-eV5fV8w" },
+  { t: "Raag Yaman for Evening Relaxation — Swar Sanchari", c: "Sitar", id: "8lEXjsEcpa8" },
+  { t: "Deep Focus & Study Music — Flute & Sitar, 432Hz", c: "Sitar", id: "kKH4suw4tqI" },
+  { t: "Indian Classical Focus Music — Sitar & Flute Ragas", c: "Sitar", id: "Ef0tk0q-ITo" },
+  { t: "Echoes of the Eternal — Sitar & Flute", c: "Sitar", id: "uIFvBapgywo" },
+  { t: "Peaceful Sitar Instrumental — Study & Sleep", c: "Sitar", id: "nZhSBN1_3hw" },
+  { t: "Relaxing Indian Sitar Music for Meditation", c: "Sitar", id: "FuZgOP5zOQM" },
+
+  // Flute & Bansuri
+  { t: "Deep Meditation — Relaxing Indian Flute (Bansuri)", c: "Flute", id: "ForqZRpres0" },
+  { t: "Bansuri Flute Meditation — 30 min Improvisation", c: "Flute", id: "VqXMwWuvSjU" },
+  { t: "Peaceful Indian Bansuri Flute for Meditation", c: "Flute", id: "XmkeNNIqQTI" },
+  { t: "Divine Flute Meditation — Bansuri Krishna Music", c: "Flute", id: "UwlUSWMtd-s" },
+  { t: "Tabla & Bansuri Meditation Music", c: "Flute", id: "OU-pcEjsoxs" },
+  { t: "Morning Flute Music — Himalayan Mountain Flute", c: "Flute", id: "tF4z5kntXAA" },
+  { t: "Indian Flute Music for Yoga", c: "Flute", id: "g_LNp8xY1YM" },
+  { t: "Bansuri Flute Music — Serene Mood", c: "Flute", id: "pAMMKNvS7Xc" },
+  { t: "Bansuri Flute, Cello, Harp & Piano — Hope", c: "Flute", id: "vfnGJOTtp0k" },
+  { t: "Raga Bhairavi — Pt. Hariprasad Chaurasia, Flute", c: "Flute", id: "tLXNNejKhJs" },
+
+  // Santoor
+  { t: "Relaxing Santoor — Stress Relief & Study, 60 min", c: "Santoor", id: "rnlESA5nChc" },
+  { t: "Relaxing Santoor Music — Sandip Chatterjee, 30 min", c: "Santoor", id: "nNUtGWo18f0" },
+  { t: "Persian Santoor Live Session — Study & Sleep", c: "Santoor", id: "o3Dv3jz9w3o" },
+  { t: "Relaxing Santoor / Santur Instrumental — Zen", c: "Santoor", id: "1YZQ6hjPTOw" },
+  { t: "Santoor / Santur Instrumental — Meditation, Zen", c: "Santoor", id: "SFke70Py_48" },
+  { t: "Santoor Relaxing Music Vol. 1 — Yoga", c: "Santoor", id: "90qarFuhHVg" },
+  { t: "Santoor Relaxing Music — Pt. Shivkumar Sharma", c: "Santoor", id: "0-19bzs5NoM" },
+  { t: "Relaxing Santoor Music — Zen, 1 hour", c: "Santoor", id: "2-SLFDNHD1k" },
+  { t: "Santoor for Focus & Peace — 1 Hour, with crickets", c: "Santoor", id: "RfQDCrURflU" },
+
+  // Sarod
+  { t: "Relaxing Sarod Music — Meditation, Stress Relief", c: "Sarod", id: "hC8F1bBZCk8" },
+  { t: "Soulful Sarod Classical Music — Rohan Prasanna", c: "Sarod", id: "OgmM3hJD5Hs" },
+  { t: "Sitar, Tabla, Bansuri, Sarod & Santoor — Morning Raga", c: "Sarod", id: "dCr30XpOuxo" },
+  { t: "Raindrops — Sarod, with water sounds", c: "Sarod", id: "i3UhqMfh5po" },
+  { t: "Ustad Ali Akbar Khan's Sarod Resonance", c: "Sarod", id: "sN51Sh6vJsk" },
+  { t: "Relaxing & Smooth Sarod Music", c: "Sarod", id: "UlwL0KX45Bo" },
+
+  // Veena & slide (Mohan veena)
+  { t: "Veenamrutham — Veena Instrumental Album", c: "Veena", id: "ohACeQcYHK4" },
+  { t: "Veenamrutham — Veena Instrumental, Relaxing", c: "Veena", id: "8bYvhhxYgqw" },
+  { t: "Veena Vandhanam — E. Gayathri, 1 Hour", c: "Veena", id: "NW21j6X3tgA" },
+  { t: "Rudra Veena Therapy — Memory & Focus", c: "Veena", id: "-yGAMoYkRkE" },
+  { t: "Sri Madhava — E. Gayathri, Carnatic Veena", c: "Veena", id: "MNxLIaJJ84M" },
+  { t: "Ennaallu Oorake — E. Gayathri, Veena", c: "Veena", id: "r7_zmXfGIFk" },
+  { t: "Mokshamu Galada — E. Gayathri, Veena", c: "Veena", id: "qFq1TyLPX8w" },
+  { t: "Carnatic Violin & Veena — Instrumental", c: "Veena", id: "YFvwPVh97Tk" },
+  { t: "Mohan Veena — Raga Miya Malhar, Pt. Vishwa Mohan Bhatt", c: "Veena", id: "AYSZNhgKPpg" },
+  { t: "Mohan Veena — Classical Raga Series", c: "Veena", id: "wzihfxiT03k" },
+  { t: "Mohan Veena — Pt. Vishwa Mohan Bhatt, Live at BCMF", c: "Veena", id: "smGyQ4u3xL8" },
+  { t: "Gawati (evening raga) — Mohan Veena, Darbar Festival", c: "Veena", id: "GO6v2XzWf-w" },
+
+  // Violin & Carnatic
+  { t: "T.N. Krishnan — Carnatic Violin, Devotional Collection", c: "Violin", id: "fxtwDFW7dYQ" },
+  { t: "Carnatic Violin — Ashtapadhi Devotional Jukebox", c: "Violin", id: "brhtFzBA5B8" },
+  { t: "Siddhi Vinayaga — Kunnakudi Vaidyanathan, Violin", c: "Violin", id: "hbYB0C4UH5A" },
+  { t: "Nada Aradhana — Carnatic Violin Meditation", c: "Violin", id: "Fw5P1xTDa40" },
+  { t: "Musical Melodies — A. Kanyakumari, Violin Jukebox", c: "Violin", id: "fSnP5br8_Xo" },
+  { t: "Ardhanareeswaram — M. S. Gopalakrishnan, Violin", c: "Violin", id: "F1h3hYUOIhA" },
+  { t: "Violin Melody — M. S. Gopalakrishnan", c: "Violin", id: "iZc0smRWFH8" },
+  { t: "Sacred Gems of Thyagaraja — A. Kanyakumari, Violin", c: "Violin", id: "KMhD0wdlXiQ" },
+
+  // Fusion & lo-fi
+  { t: "Chill Indian Vibes — Lo-Fi Beats for Relaxation & Study", c: "Fusion", id: "QsEQ6GCemPY" },
+  { t: "Indian Classical Fusion — Sitar, Tabla, Guitar & Flute", c: "Fusion", id: "2DOmiFaRKUE" },
+  { t: "Light Steps Before Rain — Bansuri & Tabla, Study Focus", c: "Fusion", id: "2PSyCG7yfKw" },
+  { t: "Yakshas – Mokshas — Sitar, Tabla, Flute Fusion", c: "Fusion", id: "qpf32pHqmpY" },
+  { t: "Calming Fresh Mornings — Tanpura, Sitar & Tabla", c: "Fusion", id: "0aedfErFnmY" },
+  { t: "Sitar & Flute with River Ambience — Sunset on the Ganges", c: "Fusion", id: "o4bXf0IuWfI" },
+
+  // Singing bowls
+  { t: "Himalayan Singing Bowls — 528Hz, 33 minutes", c: "Singing Bowls", id: "eNmjWjpxUOM" },
+  { t: "Qi Music Meditation — Himalayan Singing Bowls (ASMR)", c: "Singing Bowls", id: "JXm5-jqkfPY" },
+  { t: "Fall Asleep with Himalayan Singing Bowls", c: "Singing Bowls", id: "Td2gdPGo2jM" },
+  { t: "9 Hours Tibetan Healing Sounds — Singing Bowls", c: "Singing Bowls", id: "OW7TH2U4hps" },
+  { t: "30 Minutes of Tibetan Singing Bowls", c: "Singing Bowls", id: "v4-TeN8UvyI" },
+  { t: "Raw Himalayan Singing Bowls — 5 Hour Sound Bath", c: "Singing Bowls", id: "-jqUTNCVY1U" },
+  { t: "Tibetan Singing Bowl Sound Bath — 1 Hour Reset", c: "Singing Bowls", id: "PDI3mdiQuG0" },
+
+  // Devotional / Krishna flute
+  { t: "Flute of Peace — Shri Krishna Relaxing Instrumental", c: "Devotional", id: "eWgjvxR96VY" },
+  { t: "Relaxing Krishna Flute Music — Instrumental Peaceful", c: "Devotional", id: "HJRdp2aV5_4" },
+  { t: "Krishna Flute — Raag Bihag, Meditation Music", c: "Devotional", id: "OHwxMGQGFpc" },
+  { t: "Krishna Flute Music for Positive Energy", c: "Devotional", id: "6sX74H9jmVI" },
+  { t: "Krishna Flute Music — 24/7 Relaxing, Heal & Meditate", c: "Devotional", id: "pTqoIWTNXCE" },
+  { t: "Krishna's Flute Music — Healing Meditation, Lofi Devotional", c: "Devotional", id: "uXOmOtNPjX0" },
+  { t: "Krishna Theme Flute — Healing & Stress Relief", c: "Devotional", id: "gxvpOq8JlPI" },
+  { t: "Lord Krishna Flute Music — Mind, Body & Soul", c: "Devotional", id: "j2QX6Vyj1jI" },
+  { t: "Non-Stop Krishna Flute Music — Bhakti", c: "Devotional", id: "5jca-sWgemI" },
+
+  // Vocal & folk
+  { t: "Raga Bhairav — Nirali Kartik, Morning Raga", c: "Vocal & Folk", id: "G0V0q_yA49U" },
+  { t: "Raga Ahir Bhairav — Mahesh Kale, Morning Raga", c: "Vocal & Folk", id: "_mRuO1CD_Yo" },
+  { t: "Kesariya Banna — Rajasthani Folk, Rashid Khan Langa", c: "Vocal & Folk", id: "FFIV6ekoI1U" },
+  { t: "Khayal — Sipra Bose, Nata-Bhairava & Madhubanti", c: "Vocal & Folk", id: "uv2KrajNG2E" },
+];
+
+const PLAYLISTS = [
+  { t: "Sitar, Tabla & Flute — Meditation & Healing", c: "Playlist", list: "PLEzciPHvmWePPKnb6Ll4yo_fIscjmuVMF" },
+  { t: "Darbar VR360 — Evening Ragas", c: "Playlist", list: "PLUF0f6tPgIwhnGqc3-LfbgeMXvtmFLet0" },
+  { t: "Raag Yaman (Kalyan, Puriya Kalyan) — Evening Raag", c: "Playlist", list: "PLnb9o8WxcWnajQAOClrB2ue451wK6YAne" },
+  { t: "Santoor — Instrumental Songs", c: "Playlist", list: "PLM45TEMGzX4hxlRTpnEvfa1UcvxfRGewB" },
+  { t: "Sarod — Instrumental Songs", c: "Playlist", list: "PLM45TEMGzX4gqntOM4DTcZ02Tpvf3OJGp" },
+  { t: "Vadyam S01 — Carnatic Veena Series", c: "Playlist", list: "PLvKVTjIWnOc6P15HJ77QInEFC8BfCuEyU" },
+  { t: "Carnatic Classical Instrumental — Veena", c: "Playlist", list: "PLmiOIx7v75JbeBQ7YbbGS96HzqZGiHlH8" },
+  { t: "Mohan Veena — Instrumental Songs", c: "Playlist", list: "PLM45TEMGzX4hXOgtxW3LKJRUxhNJa9hIV" },
+  { t: "Violin — Carnatic Instrumental Music", c: "Playlist", list: "PLcsVUdbSw_O5pfkH_U6kewS7e0bWXthjQ" },
+  { t: "Carnatic Instrumental", c: "Playlist", list: "PL5Yy6HFxVU6rzFOaYvU2Hy343uSeze9Wi" },
+  { t: "Rajasthani Traditional Folk Tunes", c: "Playlist", list: "PLM45TEMGzX4hj4A3enuDVLH6PVFrg-pA_" },
+  { t: "Best Rajasthani Folk Songs", c: "Playlist", list: "PLM45TEMGzX4iTiIjVQBHaf1ud4eXBV0W4" },
+  { t: "Rajasthani Folk Music", c: "Playlist", list: "PL2egcVi4ZXL071X_EUHFa_QlvkMkPa5r4" },
+  { t: "Sitar Masters Collection — Ravi Shankar, Vilayat Khan & more", c: "Playlist", list: "PLqEHGrleV0zyeswByXAhI3rujDiizRSE1" },
+];
+
+const ALL_ENTRIES = [...LIBRARY, ...PLAYLISTS];
+
 const hourNow = () => {
   const h = new Date().getHours();
   return h < 4 ? h + 24 : h; // shift so the day starts at 4 AM, matching PRAHARS
@@ -185,7 +313,7 @@ paintSelection();
 /* ---------------- YouTube IFrame Player ---------------- */
 let ytPlayer = null;
 let ytReady = false;
-let pendingVideoId = null;
+let pendingTrack = null;
 let currentVideoId = null;
 
 window.onYouTubeIframeAPIReady = function(){
@@ -196,7 +324,7 @@ window.onYouTubeIframeAPIReady = function(){
       onReady: () => {
         ytReady = true;
         ytPlayer.setVolume(60);
-        if (pendingVideoId) playVideo(pendingVideoId);
+        if (pendingTrack) playEntry(pendingTrack);
       },
       onStateChange: onPlayerStateChange,
       onError: onPlayerError
@@ -204,11 +332,19 @@ window.onYouTubeIframeAPIReady = function(){
   });
 };
 
-function playVideo(videoId){
-  if (!ytReady) { pendingVideoId = videoId; return; }
-  currentVideoId = videoId;
-  ytPlayer.loadVideoById(videoId);
+// entry: { id } for a single video, or { list } for a playlist
+function playEntry(entry){
+  if (!ytReady) { pendingTrack = entry; return; }
+  if (entry.list){
+    currentVideoId = null;
+    ytPlayer.loadPlaylist({ list: entry.list, listType: "playlist", index: 0 });
+  } else {
+    currentVideoId = entry.id;
+    ytPlayer.loadVideoById(entry.id);
+  }
 }
+
+function playVideo(videoId){ playEntry({ id: videoId }); }
 
 function onPlayerError(){
   document.getElementById("player-title").textContent =
@@ -249,6 +385,72 @@ document.getElementById("player-volume").addEventListener("input", (e) => {
 document.getElementById("play-current").addEventListener("click", () => {
   loadTrack(PRAHARS[selectedIndex]);
 });
+
+/* ---------------- Library ---------------- */
+const CATEGORIES = ["All", ...new Set(ALL_ENTRIES.map(e => e.c))];
+const chipsWrap = document.getElementById("library-chips");
+const listWrap = document.getElementById("library-list");
+const searchInput = document.getElementById("library-search");
+let activeCategory = "All";
+let activeRow = null;
+
+CATEGORIES.forEach(cat => {
+  const chip = document.createElement("button");
+  chip.type = "button";
+  chip.className = "chip" + (cat === "All" ? " active" : "");
+  chip.textContent = cat;
+  chip.addEventListener("click", () => {
+    activeCategory = cat;
+    chipsWrap.querySelectorAll(".chip").forEach(c => c.classList.toggle("active", c === chip));
+    renderLibrary();
+  });
+  chipsWrap.appendChild(chip);
+});
+
+function renderLibrary(){
+  const q = searchInput.value.trim().toLowerCase();
+  const rows = ALL_ENTRIES.filter(e => {
+    const matchesCat = activeCategory === "All" || e.c === activeCategory;
+    const matchesQ = !q || e.t.toLowerCase().includes(q) || e.c.toLowerCase().includes(q);
+    return matchesCat && matchesQ;
+  });
+
+  listWrap.innerHTML = "";
+  if (rows.length === 0){
+    const empty = document.createElement("p");
+    empty.className = "no-results";
+    empty.textContent = "Nothing matches that search — try a different word or category.";
+    listWrap.appendChild(empty);
+    return;
+  }
+
+  rows.forEach(entry => {
+    const row = document.createElement("button");
+    row.type = "button";
+    row.className = "track-row";
+    row.innerHTML = `
+      <span class="track-play">${playIconSmall}</span>
+      <span class="track-name">${entry.t}</span>
+      <span class="track-tag">${entry.c}</span>
+    `;
+    row.addEventListener("click", () => {
+      if (activeRow) activeRow.classList.remove("playing");
+      row.classList.add("playing");
+      activeRow = row;
+      document.getElementById("player-title").textContent = entry.t;
+      document.getElementById("player-yt-link").href = entry.list
+        ? `https://www.youtube.com/playlist?list=${entry.list}`
+        : `https://www.youtube.com/watch?v=${entry.id}`;
+      playEntry(entry);
+    });
+    listWrap.appendChild(row);
+  });
+}
+
+const playIconSmall = `<svg viewBox="0 0 24 24" width="12" height="12"><path d="M6 4l14 8-14 8V4z" fill="currentColor"/></svg>`;
+
+searchInput.addEventListener("input", renderLibrary);
+renderLibrary();
 
 /* ---------------- Timer ---------------- */
 const ring = document.getElementById("ring-progress");
