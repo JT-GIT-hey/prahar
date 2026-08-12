@@ -1,0 +1,132 @@
+<svg viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMax slice">
+<defs>
+  <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#14111F"/>
+    <stop offset="38%" stop-color="#241C3A"/>
+    <stop offset="66%" stop-color="#5C3A44"/>
+    <stop offset="100%" stop-color="#C97A3E"/>
+  </linearGradient>
+  <radialGradient id="sun" cx="50%" cy="50%" r="50%">
+    <stop offset="0%" stop-color="#F4D999"/>
+    <stop offset="55%" stop-color="#E7C777"/>
+    <stop offset="100%" stop-color="#CC9A2E" stop-opacity="0"/>
+  </radialGradient>
+  <linearGradient id="ridgeFar" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#463659"/>
+    <stop offset="100%" stop-color="#3A2C49"/>
+  </linearGradient>
+  <linearGradient id="ridgeMid" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#332841"/>
+    <stop offset="100%" stop-color="#291F35"/>
+  </linearGradient>
+  <linearGradient id="ridgeNear" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#1E1829"/>
+    <stop offset="100%" stop-color="#17141F"/>
+  </linearGradient>
+  <linearGradient id="ground" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#1B1724"/>
+    <stop offset="100%" stop-color="#100D17"/>
+  </linearGradient>
+</defs>
+
+<rect x="0" y="0" width="1600" height="900" fill="url(#sky)"/>
+<circle cx="1180" cy="330" r="230" fill="url(#sun)"/>
+<circle cx="1180" cy="330" r="80" fill="#EFCF8E" opacity="0.9"/>
+
+<!-- prayer flags -->
+<path d="M0 90 Q 260 40 560 100" stroke="#8A3324" stroke-width="3" fill="none" opacity=".55"/>
+<g opacity=".6">
+  <path d="M40 96 l26 30 l26 -26 Z" fill="#8A3324"/>
+  <path d="M120 90 l26 30 l26 -28 Z" fill="#CC9A2E"/>
+  <path d="M200 87 l26 30 l26 -30 Z" fill="#57634B"/>
+  <path d="M280 87 l26 30 l26 -30 Z" fill="#A79FBD"/>
+  <path d="M360 90 l26 30 l26 -28 Z" fill="#8A3324"/>
+  <path d="M440 95 l26 30 l26 -26 Z" fill="#CC9A2E"/>
+</g>
+
+<!-- far ridge, snow caps -->
+<path d="M0 480 L120 380 220 430 340 320 460 410 600 300 760 420 900 340 1050 430 1220 360 1380 440 1600 380 1600 620 0 620 Z" fill="url(#ridgeFar)"/>
+<path d="M120 380 L150 400 190 400 220 430 M340 320 L370 345 410 342 460 410 M600 300 L635 328 685 325 760 420 M1050 430 L1080 400 1150 400 1220 360" stroke="#6E5F82" stroke-width="6" fill="none" opacity=".5" stroke-linecap="round"/>
+
+<!-- mid ridge -->
+<path d="M0 560 L180 470 360 540 520 440 700 550 880 460 1080 560 1260 470 1600 540 1600 700 0 700 Z" fill="url(#ridgeMid)"/>
+
+<!-- near ridge / hillside the boy sits on -->
+<path d="M0 660 L260 560 520 640 780 540 1040 630 1300 560 1600 630 1600 900 0 900 Z" fill="url(#ridgeNear)"/>
+
+<!-- foreground terrace -->
+<path d="M0 760 Q 400 700 800 740 T 1600 730 L1600 900 0 900 Z" fill="url(#ground)"/>
+
+<!-- pine silhouettes -->
+<g fill="#120F19">
+  <path d="M120 760 l20 -70 20 70 -8 0 -4 -18 -16 0 -4 18 Z"/>
+  <path d="M150 760 l26 -95 26 95 -10 0 -5 -22 -22 0 -5 22 Z"/>
+  <path d="M1450 770 l22 -78 22 78 -9 0 -4 -20 -18 0 -4 20 Z"/>
+</g>
+
+<!-- ============ boy studying scene ============ -->
+<g transform="translate(700,690)">
+  <!-- flat mat -->
+  <ellipse cx="60" cy="118" rx="230" ry="26" fill="#241B05" opacity=".35"/>
+  <path d="M-140 110 Q 60 88 260 108 L 250 128 Q 60 108 -132 130 Z" fill="#8A3324" opacity=".85"/>
+
+  <!-- dog, curled, to the left -->
+  <g transform="translate(-95,60)">
+    <path d="M0 40 Q -10 8 30 4 Q 60 0 62 22 Q 64 38 40 42 Q 46 30 30 26 Q 10 24 8 40 Z" fill="#3A2C49"/>
+    <path d="M55 12 Q 70 2 78 14 Q 82 22 70 24 Z" fill="#3A2C49"/>
+    <circle cx="66" cy="16" r="2.4" fill="#E7C777"/>
+  </g>
+
+  <!-- boy body, cross-legged, side-ish angle -->
+  <g transform="translate(20,-6)">
+    <!-- crossed legs -->
+    <path d="M-40 78 Q 0 100 60 82 Q 40 96 0 96 Q -36 96 -40 78 Z" fill="#20263B"/>
+    <!-- torso -->
+    <path d="M-18 20 Q -26 55 -10 80 L 44 80 Q 54 50 36 18 Q 10 4 -18 20 Z" fill="#57634B"/>
+    <!-- shawl fold accent -->
+    <path d="M-14 24 Q -4 52 4 80" stroke="#CC9A2E" stroke-width="4" fill="none" opacity=".55"/>
+    <!-- head -->
+    <circle cx="14" cy="-2" r="19" fill="#2A2130"/>
+    <!-- hair -->
+    <path d="M-5 -12 Q 14 -28 33 -12 Q 30 -20 14 -20 Q -2 -20 -5 -12 Z" fill="#120F19"/>
+    <!-- IEM cable + earbud -->
+    <circle cx="31" cy="-3" r="2.6" fill="#E7C777"/>
+    <path d="M31 -1 Q 40 20 30 46 Q 22 58 26 74" stroke="#E7C777" stroke-width="2" fill="none" opacity=".8"/>
+    <!-- arm to laptop -->
+    <path d="M-8 34 Q -30 46 -34 66" stroke="#57634B" stroke-width="10" fill="none" stroke-linecap="round"/>
+    <path d="M30 30 Q 46 44 46 64" stroke="#57634B" stroke-width="10" fill="none" stroke-linecap="round"/>
+  </g>
+
+  <!-- laptop, open, in front of boy -->
+  <g transform="translate(-56,72)">
+    <path d="M0 26 L74 26 82 40 -8 40 Z" fill="#241E33"/>
+    <path d="M4 -18 L70 -18 74 26 0 26 Z" fill="#120F19"/>
+    <path d="M8 -14 L66 -14 69 22 4 22 Z" fill="#E7C777" opacity=".85"/>
+    <path d="M14 -8 L60 -8 M14 -2 L60 -2 M14 4 L48 4" stroke="#3A2C49" stroke-width="1.6" opacity=".6"/>
+  </g>
+
+  <!-- notebook + pen -->
+  <g transform="translate(46,86)">
+    <rect x="0" y="0" width="46" height="30" rx="2" fill="#ECE2C9"/>
+    <path d="M4 6 L42 6 M4 12 L42 12 M4 18 L30 18" stroke="#8A3324" stroke-width="1.4" opacity=".6"/>
+    <rect x="50" y="14" width="30" height="4" rx="2" fill="#CC9A2E" transform="rotate(18 50 14)"/>
+  </g>
+
+  <!-- chai cup with steam -->
+  <g transform="translate(108,64)">
+    <path d="M0 14 Q 0 26 12 26 Q 24 26 24 14 L 22 0 2 0 Z" fill="#ECE2C9"/>
+    <path d="M2 4 L22 4" stroke="#8A3324" stroke-width="2"/>
+    <path d="M24 8 Q 32 8 32 16 Q 32 22 24 20" fill="none" stroke="#ECE2C9" stroke-width="2.4"/>
+    <path d="M8 -4 Q 4 -14 9 -22" stroke="#A79FBD" stroke-width="2" fill="none" opacity=".7"/>
+    <path d="M16 -4 Q 12 -16 17 -26" stroke="#A79FBD" stroke-width="2" fill="none" opacity=".55"/>
+  </g>
+
+  <!-- phone on the mat -->
+  <g transform="translate(-70,96) rotate(-8)">
+    <rect x="0" y="0" width="20" height="34" rx="4" fill="#120F19" stroke="#E7C777" stroke-width="1.2"/>
+  </g>
+</g>
+
+<!-- soft vignette so foreground UI stays legible -->
+<rect x="0" y="0" width="1600" height="900" fill="#17141F" opacity="0"/>
+</svg>
